@@ -15,7 +15,7 @@ class TestSolver(unittest.TestCase):
 
     # Step 5. Two roots test
     def test_two_roots(self):
-        res = self.solver.sqrSolve(2, 0, -1);
+        res = self.solver.sqrSolve(1, 0, -1);
 
         self.assertEqual(len(res), 2);
         self.assertAlmostEqual(res[0], -1);
