@@ -1,8 +1,6 @@
-# Класс для решения квадратных уравнений
-import gr_globals as grg
 import math
 
-
+# Square equations solver
 class Solver:
 
     #empty constructor
@@ -12,12 +10,10 @@ class Solver:
     def sqrSolve(self, a, b, c):
         d = b**2 - 4*a*c
         res = [];
-        if d < -grg.double_eps:
+        if d < 0:
             # D < 0
-            return []
-        elif d < 0:
-            # D == 0
-            d = abs(d)
+            return res
+        
         sd = math.sqrt(d)
         res.append((-b - sd)/(2*a))
         res.append((-b + sd)/(2*a))
