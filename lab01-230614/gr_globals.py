@@ -1,2 +1,2 @@
 # Точность расчета переменных типа double
-double_precision = 3
+double_precision = 2

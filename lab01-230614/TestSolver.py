@@ -21,7 +21,6 @@ class TestSolver(unittest.TestCase):
         self.assertAlmostEqual(res[0], -1)
         self.assertAlmostEqual(res[1], 1)
 
-
     # Step 7. Double-the-same roots test
     def test_double_roots(self):
         res = self.solver.sqrSolve(1, 2, 1)
@@ -33,6 +32,13 @@ class TestSolver(unittest.TestCase):
     def test_zero_a(self):
         with self.assertRaises(Exception):
             self.solver.sqrSolve(0, 1, 1)
+
+    # Step 11. Double-the-same roots with almost zero D
+    def test_almost_zero_d(self):
+        res = self.solver.sqrSolve(1, 2, 0.99875)
+
+        self.assertEqual(len(res), 1)
+        self.assertAlmostEqual(res[0], -1.035355339059327)
 
 
 # Executing the tests in the above test case class
