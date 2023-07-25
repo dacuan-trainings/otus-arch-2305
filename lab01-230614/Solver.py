@@ -20,5 +20,7 @@ class Solver:
         
         sd = math.sqrt(d)
         res.append((-b - sd)/(2*a))
-        res.append((-b + sd)/(2*a))
+        if round(d, grg.double_precision) != 0:
+            res.append((-b + sd)/(2*a))
+
         return res
