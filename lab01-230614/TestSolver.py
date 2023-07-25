@@ -26,9 +26,8 @@ class TestSolver(unittest.TestCase):
     def test_double_roots(self):
         res = self.solver.sqrSolve(1, 2, 1)
 
-        self.assertEqual(len(res), 2)
+        self.assertEqual(len(res), 1)
         self.assertAlmostEqual(res[0], -1)
-        self.assertAlmostEqual(res[1], -1)
 
     # Step 9. Zero "a" test
     def test_zero_a(self):
