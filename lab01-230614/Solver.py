@@ -8,10 +8,7 @@ class Solver:
     #empty constructor
     def __init__(self):
         pass
-    
-    def print(self):
-        print("Hello world!")
-        return
+
     def sqrSolve(self, a, b, c):
         d = b**2 - 4*a*c
         res = [];
