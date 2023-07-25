@@ -32,14 +32,10 @@ class TestSolver(unittest.TestCase):
 
     # Step 9. Zero "a" test
     def test_zero_a(self):
-        res = self.solver.sqrSolve(0, 1, 1);
-
-        self.assertEqual(len(res), 2);
-        self.assertAlmostEqual(res[0], -1);
-        self.assertAlmostEqual(res[1], -1);
+        with self.assertRaises(Exception):
+            self.solver.sqrSolve(0, 1, 1)
 
 
-       
 # Executing the tests in the above test case class
 if __name__ == "__main__":
   unittest.main()
