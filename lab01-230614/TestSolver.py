@@ -41,17 +41,29 @@ class TestSolver(unittest.TestCase):
         self.assertAlmostEqual(res[0], -1.035355339059327)
 
     # Step 13. Non-double args
-    def test_non_double_a(self):
+    def test_string_a(self):
         with self.assertRaises(Exception):
             self.solver.sqrSolve('1', 1, 1)   
 
-    def test_non_double_b(self):
+    def test_array_a(self):
+        with self.assertRaises(Exception):
+            self.solver.sqrSolve([1], 1, 1)   
+
+    def test_string_b(self):
         with self.assertRaises(Exception):
             self.solver.sqrSolve(1, '1', 1)   
 
-    def test_non_double_c(self):
+    def test_array_b(self):
+        with self.assertRaises(Exception):
+            self.solver.sqrSolve(1, [1], 1)   
+
+    def test_string_c(self):
         with self.assertRaises(Exception):
             self.solver.sqrSolve(1, 1, '1')   
+
+    def test_array_c(self):
+        with self.assertRaises(Exception):
+            self.solver.sqrSolve(1, 1, [1])   
 
 
 # Executing the tests in the above test case class
