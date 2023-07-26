@@ -17,5 +17,5 @@ jobs:
         with:
           python-version: 3.6
 
-      - name: Test with pytest
+      - name: Test with Python unittest
         run:  python -m unittest discover lab01-230614 'Test*.py'
